@@ -1,6 +1,7 @@
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Turno.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\exceptions\IllegalOrphanException.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvUsuarios.java
+C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvEditDoctor.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Usuario.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\HistoriaJpaController.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Detalles.java
@@ -15,6 +16,7 @@ C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logic
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\PersonaJpaController.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvElimUsuarios.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\DetallesJpaController.java
+C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvDoctor.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\exceptions\NonexistentEntityException.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\SecretarioJpaController.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\exceptions\PreexistingEntityException.java
@@ -26,3 +28,4 @@ C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persi
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\ResponsableJpaController.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Secretario.java
 C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvEditUsuarios.java
+C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvEliminarDoctor.java

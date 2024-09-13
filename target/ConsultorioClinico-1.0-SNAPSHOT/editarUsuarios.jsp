@@ -22,7 +22,7 @@
                    placeholder="Rol" value="<%=usu.getRol()%>">
         </div>
         
-
+           
         <!-- Aca va ir todo lo que respecta a horarios y usuarios  -->
 
     </div>

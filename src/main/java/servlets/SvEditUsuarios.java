@@ -40,7 +40,7 @@ public class SvEditUsuarios extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+         throws ServletException, IOException {
         String nombreUsu = request.getParameter("nombreusu");
         String contrasenia = request.getParameter("contrasenia");
         String rol = request.getParameter("rol");

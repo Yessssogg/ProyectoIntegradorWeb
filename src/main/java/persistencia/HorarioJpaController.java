@@ -16,10 +16,7 @@ import javax.persistence.criteria.Root;
 import logica.Horario;
 import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Nesto
- */
+
 public class HorarioJpaController implements Serializable {
 
     public HorarioJpaController(EntityManagerFactory emf) {

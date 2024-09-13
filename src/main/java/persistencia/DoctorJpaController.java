@@ -7,10 +7,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Doctor;
+import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
 
@@ -27,6 +29,28 @@ public class DoctorJpaController implements Serializable {
    public DoctorJpaController() {
         emf = Persistence.createEntityManagerFactory("ConsultorioClinico_PU");
     }
+   
+   
+   public Doctor findDoctorByUsuario(Usuario usuario) {
+    EntityManager em = getEntityManager();
+    try {
+        // Asegúrate de que 'unUsuario' es el nombre correcto del atributo en Doctor
+        Query query = em.createQuery("SELECT d FROM Doctor d WHERE d.unUsuario = :usuario");
+        query.setParameter("usuario", usuario);
+        
+        // Utiliza getSingleResult() si estás seguro de que el resultado es único
+        return (Doctor) query.getSingleResult();
+    } catch (NoResultException e) {
+        // No se encontró ningún Doctor asociado, retorna null
+        return null;
+    } finally {
+        // Cierra el EntityManager para liberar recursos
+        em.close();
+    }
+}
+
+   
+   
     public void create(Doctor doctor) {
         EntityManager em = null;
         try {

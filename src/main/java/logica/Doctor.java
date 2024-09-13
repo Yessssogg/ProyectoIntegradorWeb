@@ -62,4 +62,5 @@ public class Doctor extends Persona implements Serializable {
     public void setUnHorario(Horario unHorario) {
         this.unHorario = unHorario;
     }
+    
 }

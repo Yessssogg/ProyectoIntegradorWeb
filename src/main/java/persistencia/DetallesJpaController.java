@@ -17,10 +17,7 @@ import logica.Detalles;
 import logica.Historia;
 import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Nesto
- */
+  
 public class DetallesJpaController implements Serializable {
 
     public DetallesJpaController(EntityManagerFactory emf) {
