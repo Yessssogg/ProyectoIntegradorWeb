@@ -2,17 +2,115 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <body id="page-top">
+    <style>
+        .imgLogo{
+            width:70px;
+        }
+        .floating-window {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1000;
+        }
 
+        .floating-window-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+
+        .section-title {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Estilos específicos para cada sección */
+        .mision {
+            background-color: #ffcccc;
+            max-width: max-content;
+            text-align: center;
+        }
+
+        .vision {
+            background-color: #ccffcc;
+            max-width: max-content;
+            text-align: center;
+        }
+
+        .nosotros {
+            background-color: #cce5ff;
+            max-width: max-content;
+            text-align: center;
+        }
+
+        .contacto {
+            background-color: #ffe6b3;
+            max-width: max-content;
+            text-align: center;
+        }
+
+        .ubicacion {
+            background-color: #e6ccff;
+            max-width: max-content;
+            text-align: center;
+        }
+    </style>
     <!-- Page Wrapper -->
     <div id="wrapper">
+        <!-- Ventana flotante --> 
+        <div id="floatingWindow" class="floating-window">
+            <div class="floating-window-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2 style="text-align: center">Bienvenido al Sistema</h2>
 
-        <!-- Sidebar -->
+                <h3 class="section-title mision">Misión:</h3>
+                <p>Brindar atención médica accesible y de calidad, ofreciendo servicios especializados y de urgencias para garantizar la salud y bienestar de nuestros pacientes...</p>
+
+                <h3 class="section-title vision">Visión:</h3>
+                <p>Ser la clínica líder en atención médica integral en Lima Norte, reconocida por su excelencia, accesibilidad y tecnología de punta, contribuyendo al bienestar de la comunidad y al desarrollo del sector salud.</p>
+
+                <h3 class="section-title nosotros">Nosotros:</h3>
+                <p>La Clínica San Juan, fundada en 2004, ha trabajado constantemente en mejorar la calidad de sus servicios para brindar una atención médica oportuna y eficiente. Con un equipo de profesionales altamente capacitados y un enfoque en la satisfacción del paciente, seguimos comprometidos con la salud de nuestra comunidad.</p>
+
+                <h3 class="section-title contacto">Contacto:</h3>
+                <p>Teléfono: (01) 234-5678</p>
+                <p>Correo Electrónico: contacto@clinicasanjuan.pe</p>
+                <p>WhatsApp: +51 987 654 321</p>
+
+                <h3 class="section-title ubicacion">Ubicación de la Empresa - Sedes:</h3>
+                <p>Sede Principal: Av. Alfredo Mendiola 950, San Martín de Porres, Lima</p>
+                <p>Sede Surco: Av. Primavera 150, Santiago de Surco, Lima</p>
+                <p>Sede Callao: Av. Colonial 5000, Callao</p>
+            </div>
+        </div>
+
+                <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">                   
-                   <i class="fas fa-regular fa-tooth"></i>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" id="logoLink">
+                <div class="sidebar-brand-icon">                   
+                    <img class="imgLogo" src="./img/health.jpg" alt="alt"/>
                 </div>
                 <div class="sidebar-brand-text mx-3">Consultorio Clinico</div>
             </a>
@@ -159,3 +257,28 @@
                         <h1 class="h3 mb-0 text-gray-800">Clinica San Juan</h1>
                         
                     </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<script>
+    // Abrir la ventana flotante
+    document.getElementById("logoLink").addEventListener("click", function() {
+        document.getElementById("floatingWindow").style.display = "block";
+    });
+
+    // Cerrar la ventana flotante
+    document.getElementById("closeBtn").addEventListener("click", function() {
+        document.getElementById("floatingWindow").style.display = "none";
+    });
+
+    // Cerrar la ventana al hacer clic fuera de ella
+    window.addEventListener("click", function(event) {
+        const floatingWindow = document.getElementById("floatingWindow");
+        if (event.target == floatingWindow) {
+            floatingWindow.style.display = "none";
+        }
+    });
+
+    </script>
