@@ -1,28 +1,28 @@
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Turno.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\exceptions\IllegalOrphanException.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvUsuarios.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Usuario.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\HistoriaJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Detalles.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\HorarioJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\DoctorJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Horario.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\UsuarioJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Historia.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Responsable.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Controladora.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Persona.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\PersonaJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvElimUsuarios.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\DetallesJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\exceptions\NonexistentEntityException.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\SecretarioJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\exceptions\PreexistingEntityException.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Paciente.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\TurnoJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Doctor.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\ControladoraPersistencia.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\PacienteJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\persistencia\ResponsableJpaController.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\logica\Secretario.java
-C:\Users\Nesto\Documents\NetBeansProjects\ConsultorioClinico\src\main\java\servlets\SvEditUsuarios.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Detalles.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\exceptions\IllegalOrphanException.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Secretario.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Turno.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Horario.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Doctor.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\ControladoraPersistencia.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\ResponsableJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\exceptions\PreexistingEntityException.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\servlets\SvEditUsuarios.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Historia.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Controladora.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\UsuarioJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\HistoriaJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\HorarioJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\PacienteJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Paciente.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\servlets\SvUsuarios.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Persona.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\DetallesJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\SecretarioJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\TurnoJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\DoctorJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\servlets\SvElimUsuarios.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\persistencia\PersonaJpaController.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Usuario.java
+c:\Users\ALDO\Documents\Ciclo 6\Desarrollo web Integrado\ProyectoIntegradorWeb\src\main\java\logica\Responsable.java
