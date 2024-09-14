@@ -2,6 +2,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <body id="page-top">
+
     
  <!-- Validación Sesión -->
     <% HttpSession misession = request.getSession();
@@ -13,16 +14,18 @@
            
         %>
     
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
+                <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">                   
-                   <i class="fas fa-regular fa-tooth"></i>
+             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.jsp">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-regular fa-tooth"></i>
+                    
                 </div>
                 <div class="sidebar-brand-text mx-3">Consultorio Clinico</div>
             </a>
@@ -169,3 +172,4 @@
                         <h1 class="h3 mb-0 text-gray-800">Clinica San Juan</h1>
                         
                     </div>
+               
