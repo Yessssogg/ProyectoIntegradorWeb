@@ -20,7 +20,7 @@
         <div class="contenido-login">
             <form action="${pageContext.request.contextPath}/SvLogin" method="POST">
                 <img src="../img/logo.png" alt="">
-                <h2>Clinica</h2>
+                <h2>Clinica San Juan</h2>
                 <div class="input-div dni">
                     <div class="i">
                         <i class="fas fa-user"></i>
@@ -39,7 +39,7 @@
                         <input type="password" id="contrasenia" name="contrasenia" class="input" >
                     </div>
                 </div>
-                <a href="">Forgot your password?</a>
+                <a href="">Olvido su contraseña?</a>
                 <input type="submit" class="btn" value="Iniciar Sesión">
             </form>
         </div>

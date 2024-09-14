@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import logica.Controladora;
 
-
 @WebServlet(name = "SvEliminarDoctor", urlPatterns = {"/SvEliminarDoctor"})
 public class SvEliminarDoctor extends HttpServlet {
 
@@ -22,7 +21,6 @@ public class SvEliminarDoctor extends HttpServlet {
             throws ServletException, IOException {
        
     }
-
    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,7 +28,6 @@ public class SvEliminarDoctor extends HttpServlet {
         processRequest(request, response);
     }
 
-  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

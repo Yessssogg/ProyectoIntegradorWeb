@@ -35,7 +35,8 @@ public class Historia implements Serializable {
     public Historia() {
     }
 
-    public Historia(int id_historia, LocalDate fechaCreacion, String alergias, String enfermedadesPrevias, String tratamientosActuales, String cirugiasPrevias, String observaciones, String estado, String proximaCita,  List<Detalles> detallesAtencion) {
+    public Historia(int id_historia, LocalDate fechaCreacion, String alergias, String enfermedadesPrevias, String tratamientosActuales, 
+            String cirugiasPrevias, String observaciones, String estado, String proximaCita,  List<Detalles> detallesAtencion) {
         this.id_historia = id_historia;
         this.fechaCreacion = fechaCreacion;
         this.alergias = alergias;
@@ -44,8 +45,7 @@ public class Historia implements Serializable {
         this.cirugiasPrevias = cirugiasPrevias;
         this.observaciones = observaciones;
         this.estado = estado;
-        this.proximaCita = proximaCita;
-        
+        this.proximaCita = proximaCita;  
         this.detallesAtencion = detallesAtencion;
     }
 
@@ -120,9 +120,7 @@ public class Historia implements Serializable {
     public void setProximaCita(String proximaCita) {
         this.proximaCita = proximaCita;
     }
-
-  
-
+ 
     public List<Detalles> getDetallesAtencion() {
         return detallesAtencion;
     }
@@ -132,5 +130,4 @@ public class Historia implements Serializable {
     }
 
    
-
 }

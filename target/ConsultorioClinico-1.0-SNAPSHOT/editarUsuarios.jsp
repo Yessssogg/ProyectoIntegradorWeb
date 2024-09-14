@@ -20,8 +20,7 @@
         <div class="col-sm-6 mb-3 ">
             <input type="text" class="form-control form-control-user" id="rol" name="rol"
                    placeholder="Rol" value="<%=usu.getRol()%>">
-        </div>
-        
+        </div>     
            
         <!-- Aca va ir todo lo que respecta a horarios y usuarios  -->
 

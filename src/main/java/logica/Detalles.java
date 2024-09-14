@@ -28,7 +28,8 @@ public class Detalles implements Serializable {
     public Detalles() {
     }
 
-    public Detalles(int id_detalles, LocalDate fechaAtencion, String motivoConsulta, String diagnostico, String tratamiento, String recetaMedica, Historia historiaClinica) {
+    public Detalles(int id_detalles, LocalDate fechaAtencion, String motivoConsulta, String diagnostico, String tratamiento, 
+            String recetaMedica, Historia historiaClinica) {
         this.id_detalles = id_detalles;
         this.fechaAtencion = fechaAtencion;
         this.motivoConsulta = motivoConsulta;

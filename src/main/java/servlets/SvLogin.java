@@ -28,8 +28,7 @@ public class SvLogin extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
-   
+  
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -46,16 +45,8 @@ public class SvLogin extends HttpServlet {
         }
         else {
             response.sendRedirect("loginError.jsp");
-        }
-        
-        
-        
-        
-        
-        
-        
+        }                   
     }
-
     @Override
     public String getServletInfo() {
         return "Short description";

@@ -35,9 +35,7 @@ public class Turno implements Serializable {
         this.id_turno = id_turno;
         this.fecha_turno = fecha_turno;
         this.hora_turno = hora_turno;
-        this.afeccion = afeccion;
-        
-        
+        this.afeccion = afeccion;             
     }
 
     public int getId_turno() {
@@ -71,14 +69,5 @@ public class Turno implements Serializable {
     public void setAfeccion(String afeccion) {
         this.afeccion = afeccion;
     }
-
-   
-   
- 
-
-   
-
-    
-
       
 }

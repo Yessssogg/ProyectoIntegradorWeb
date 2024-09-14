@@ -25,8 +25,7 @@ public class Controladora {
     public void editarHorario(Horario horario) {
         controlPersis.editarHorario(horario);
     }
-
-    
+   
     public void crearDoctor(String especialidad, String nombreUsuario, String contrasenia, String rol,
             String dni, String nombre, String apellido, String telefono,
             String direccion, Date fecha_nac, String horarioInicio, String horarioFin) {

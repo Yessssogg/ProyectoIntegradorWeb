@@ -21,8 +21,7 @@ public class SvEditUsuarios extends HttpServlet {
             throws ServletException, IOException {
        
     }
-
-    
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -36,8 +35,7 @@ public class SvEditUsuarios extends HttpServlet {
         response.sendRedirect("editarUsuarios.jsp");
         
     }
-
-    
+  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
          throws ServletException, IOException {

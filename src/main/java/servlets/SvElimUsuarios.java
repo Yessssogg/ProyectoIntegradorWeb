@@ -18,10 +18,8 @@ public class SvElimUsuarios extends HttpServlet {
 
    Controladora control = new Controladora();  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-              
+            throws ServletException, IOException {             
     }
-
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,7 +27,6 @@ public class SvElimUsuarios extends HttpServlet {
         processRequest(request, response);
     }
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,8 +38,7 @@ public class SvElimUsuarios extends HttpServlet {
            Logger.getLogger(SvElimUsuarios.class.getName()).log(Level.SEVERE, null, ex);
        }
         response.sendRedirect("SvUsuarios");
-            
-        
+                  
     }
 
    

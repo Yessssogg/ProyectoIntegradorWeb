@@ -23,7 +23,6 @@ public class SvUsuarios extends HttpServlet {
             throws ServletException, IOException {
         
     }
-
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,12 +43,9 @@ public class SvUsuarios extends HttpServlet {
             throws ServletException, IOException {
          String nombreUsuario = request.getParameter("nombreusu"); 
           String contra = request.getParameter("contrasenia"); 
-          String rol = request.getParameter("rol"); 
-        
-        control.crearUsuario(nombreUsuario, contra, rol);
-        
-        response.sendRedirect("index.jsp");
-        
+          String rol = request.getParameter("rol");      
+        control.crearUsuario(nombreUsuario, contra, rol);   
+        response.sendRedirect("index.jsp");       
         
     }
 

@@ -31,16 +31,12 @@ public class SvEditDoctor extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-       
         try {
             int idDoctor = Integer.parseInt(request.getParameter("id"));
             Doctor doctor = control.buscarDoctor(idDoctor);
-
             // Cargar los datos del doctor en la sesión para ser utilizados en el JSP
             HttpSession session = request.getSession();
             session.setAttribute("doctorEditar", doctor);
-
             // Redirigir al JSP de edición
             response.sendRedirect("editarDoctores.jsp");
 
@@ -49,17 +45,22 @@ public class SvEditDoctor extends HttpServlet {
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error al recuperar los datos del doctor.");
         }
-      
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         try {
             // Obtener datos del formulario
             int idDoctor = Integer.parseInt(request.getParameter("id"));
+
+            String nombre = request.getParameter("nombre");
+            String apellido = request.getParameter("apellido");
             String especialidad = request.getParameter("especialidad");
+            String dni = request.getParameter("dni");
+            String telefono = request.getParameter("telefono");
+            String direccion = request.getParameter("direccion");
             String horarioInicio = request.getParameter("horario_inicio");
             String horarioFin = request.getParameter("horario_fin");
 
@@ -70,13 +71,19 @@ public class SvEditDoctor extends HttpServlet {
                 if (horario != null) {
                     horario.setHorario_inicio(horarioInicio);
                     horario.setHorario_fin(horarioFin);
-
                     // Actualizar el horario
                     control.editarHorario(horario);
                 }
 
                 // Actualizar la especialidad del doctor
                 doctor.setEspecialidad(especialidad);
+                // Actualizar los datos del doctor
+                doctor.setNombre(nombre);          // Actualizar nombre
+                doctor.setApellido(apellido);      // Actualizar apellido
+                doctor.setDni(dni);                // Actualizar DNI
+                doctor.setTelefono(telefono);      // Actualizar teléfono
+                doctor.setDireccion(direccion);    // Actualizar dirección
+                doctor.setEspecialidad(especialidad);  // Actualizar especialidad
 
                 // Actualizar el doctor
                 control.editarDoctor(doctor);
@@ -90,7 +97,7 @@ public class SvEditDoctor extends HttpServlet {
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error al actualizar los datos del doctor.");
         }
-    
+
     }
 
     @Override

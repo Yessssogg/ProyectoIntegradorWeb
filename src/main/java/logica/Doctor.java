@@ -22,7 +22,8 @@ public class Doctor extends Persona implements Serializable {
     public Doctor() {
     }
 
-    public Doctor(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, int id, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
+    public Doctor(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, int 
+            id, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
         super(id, dni, nombre, apellido, telefono, direccion, fecha_nac);
         this.especialidad = especialidad;
         this.listaTurnos = listaTurnos;
@@ -62,5 +63,5 @@ public class Doctor extends Persona implements Serializable {
     public void setUnHorario(Horario unHorario) {
         this.unHorario = unHorario;
     }
-    
+  
 }
