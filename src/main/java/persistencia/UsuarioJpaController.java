@@ -10,6 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -136,5 +137,22 @@ public UsuarioJpaController() {
             em.close();
         }
     }
-    
+    // En UsuarioJpaController
+public Usuario findUsuarioByNombre(String nombreUsuario) {
+    EntityManager em = getEntityManager();
+    try {
+        Query query = em.createQuery("SELECT u FROM Usuario u WHERE u.nombreUsuario = :nombreUsuario");
+        query.setParameter("nombreUsuario", nombreUsuario);
+        return (Usuario) query.getSingleResult();
+    } catch (NoResultException e) {
+        return null; // Maneja el caso en que no se encuentra el usuario
+    } finally {
+        em.close();
+    }
+}
+
+
+
+
+
 }

@@ -3,6 +3,8 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +34,19 @@ public class SvEliminarDoctor extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+          
+        int idDoctor = Integer.parseInt(request.getParameter("id"));
+        
+        try {
+            // Llamar a la lógica de borrar doctor
+            control.borrarDoctor(idDoctor);
+            
+            
+        } catch (Exception ex) {
+            Logger.getLogger(SvEliminarDoctor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+        response.sendRedirect("SvDoctor");
     }
 
     

@@ -1,4 +1,3 @@
-
 package persistencia;
 
 import java.util.List;
@@ -9,27 +8,28 @@ import logica.Horario;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
-
 public class ControladoraPersistencia {
-    
-    HorarioJpaController horaJPA = new HorarioJpaController();    
+
+    HorarioJpaController horaJPA = new HorarioJpaController();
     DoctorJpaController doctorJPA = new DoctorJpaController();
     PacienteJpaController pacJPA = new PacienteJpaController();
-    PersonaJpaController persJPA = new PersonaJpaController();    
+    PersonaJpaController persJPA = new PersonaJpaController();
     ResponsableJpaController respJPA = new ResponsableJpaController();
     SecretarioJpaController secreJPA = new SecretarioJpaController();
     TurnoJpaController turnJPA = new TurnoJpaController();
     UsuarioJpaController usuJPA = new UsuarioJpaController();
     DetallesJpaController detallesJPA = new DetallesJpaController();
     HistoriaJpaController historiaJPA = new HistoriaJpaController();
-    
+
     public void crearUsuario(Usuario usu) {
-        usuJPA.create(usu);        
+        usuJPA.create(usu);
     }
+
     public List<Usuario> getUsuarios() {
-      return usuJPA.findUsuarioEntities();
+        return usuJPA.findUsuarioEntities();
     }
-       public void borrarUsuario(int id) {
+
+    public void borrarUsuario(int id) {
         try {
             usuJPA.destroy(id);
         } catch (NonexistentEntityException ex) {
@@ -72,32 +72,67 @@ public class ControladoraPersistencia {
         }
         return null;
     }
-public void borrarDoctor(int id) throws Exception {
-    try {
-        // Encuentra el doctor que quieres eliminar
-        Doctor doctor = doctorJPA.findDoctor(id);
-        if (doctor != null) {
-            // Desvincula el Horario del Doctor
-            Horario horario = doctor.getUnHorario();
-            if (horario != null) {
-                doctor.setUnHorario(null);  // Desvincula el horario del doctor
-                doctorJPA.edit(doctor);     // Guarda los cambios
-                
-                // Ahora puedes eliminar el Horario
-                horaJPA.destroy(horario.getId_horario());
-            }
 
-            // Elimina el Doctor
-            doctorJPA.destroy(id);
+    public void borrarDoctor(int id) throws Exception {
+        try {
+            // Encuentra el doctor que quieres eliminar
+            Doctor doctor = doctorJPA.findDoctor(id);
+            if (doctor != null) {
+                // Desvincula el Horario del Doctor
+                Horario horario = doctor.getUnHorario();
+                if (horario != null) {
+                    doctor.setUnHorario(null);  // Desvincula el horario del doctor
+                    doctorJPA.edit(doctor);     // Guarda los cambios
+
+                    // Ahora puedes eliminar el Horario
+                    horaJPA.destroy(horario.getId_horario());
+                }
+
+                // Elimina el Doctor
+                doctorJPA.destroy(id);
+            }
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
-    } catch (NonexistentEntityException ex) {
-        Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
     }
-}
 
     public List<Doctor> getDoctores() {
-       return doctorJPA.findDoctorEntities();
+        return doctorJPA.findDoctorEntities();
     }
+
+    public Doctor buscarDoctor(int id) {
+        return doctorJPA.findDoctor(id);  // Usar el método del JPA controller
+    }
+
+    public void editarDoctor(Doctor doctor) {
+        try {
+            doctorJPA.edit(doctor);  // Actualiza el doctor en la base de datos
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void borrarHorario(int id_horario) {
+        try {
+            horaJPA.destroy(id_horario);  // Elimina el horario usando el JPA controller
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+   
+    public void editarHorario(Horario horario) {
+        try {
+            horaJPA.edit(horario); // Usar el JPA controller para persistir cambios
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Error al editar el horario", ex);
+        }
+
+    }
+
+ 
+ 
 
 
 }

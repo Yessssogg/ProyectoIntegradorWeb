@@ -1,0 +1,251 @@
+/* Reiniciar el padding, margin y box-sizing para todos los elementos */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para el cuerpo */
+body{
+    font-family: 'Poppins', sans-serif; /* Fuente principal */
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+/* Estilo para la imagen de fondo de onda */
+.wave{
+    position: fixed; /* Posición fija */
+    bottom: 0; /* Se coloca en la parte inferior */
+    left: 0; /* Se alinea a la izquierda */
+    height: 100%; /* Altura completa */
+    z-index: -1; /* Enviar al fondo */
+}
+
+/* Contenedor principal con disposición de rejilla */
+.contenedor{
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Altura completa de la ventana */
+    display: grid; /* Usar grid layout */
+    grid-template-columns: repeat(2,1fr); /* Dos columnas iguales */
+    grid-gap: 7rem; /* Espacio entre columnas */
+    padding: 0 2rem; /* Espacio interior horizontal */
+}
+
+/* Estilos para la sección de imagen */
+.img{
+    display: flex; /* Usar flexbox */
+    justify-content: flex-end; /* Alinear al final */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilos para el contenido del login */
+.contenido-login{
+    display: flex; /* Usar flexbox */
+    justify-content: flex-start; /* Alinear al inicio */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo para las imágenes dentro del contenedor de imagen */
+.img img{
+    width : 500px; /* Ancho de las imágenes */
+}
+
+/* Estilo para el formulario */
+form{
+    width: 360px; /* Ancho del formulario */
+}
+
+/* Estilo para la imagen dentro del formulario */
+.contenido-login img{
+    height: 100px; /* Altura de la imagen */
+}
+
+/* Estilo para el título del formulario */
+.contenido-login h2{
+    margin: 15px 0; /* Espaciado vertical */
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 2.9rem; /* Tamaño de fuente */
+}
+
+/* Estilo para las divisiones de entrada */
+.contenido-login .input-div{
+    position: relative; /* Posicionamiento relativo */
+    display: grid; /* Usar grid layout */
+    grid-template-columns: 7% 93%; /* Icono y campo de texto */
+    margin: 25px 0; /* Margen vertical */
+    padding: 5px 0; /* Espaciado interior vertical */
+    border-bottom: 2px solid #d4bebe; /* Borde inferior */
+}
+
+/* Estilo específico para la división de DNI */
+.contenido-login .input-div.dni{
+    margin-top: 0; /* Sin margen superior */
+}
+
+/* Estilo para el contenedor de iconos */
+.i{
+    color: #d4bebe; /* Color de los iconos */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Transición para el icono */
+.i i{
+    transition: .3s; /* Duración de la transición */
+}
+
+/* Estilo para el contenedor del campo de entrada */
+.input-div >div{
+    position: relative; /* Posicionamiento relativo */
+    height: 45px; /* Altura */
+}
+
+/* Estilo para el texto de los campos de entrada */
+.input-div > div > h5{
+    position: absolute; /* Posicionamiento absoluto */
+    left: 10px; /* Alinear a la izquierda */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajuste de posición */
+    color: #999999; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: .3s; /* Duración de la transición */
+}
+
+/* Estilo para el texto cuando el campo está enfocado */
+.input-div.focus > div > h5{
+    top: -5px; /* Mover hacia arriba */
+    font-size: 15px; /* Reducir tamaño de fuente */
+}
+
+/* Efecto de línea de enfoque en los campos de entrada */
+.input-div:before, .input-div:after{
+    content: ''; /* Contenido vacío */
+    position:absolute; /* Posicionamiento absoluto */
+    bottom: -2px; /* Posicionar en la parte inferior */
+    width: 0%; /* Ancho inicial */
+    height: 2px; /* Altura */
+    background-color: blueviolet; /* Color de la línea */
+    transition: .4s; /* Duración de la transición */
+}
+
+.input-div::before{
+    right: 50%; /* Inicia desde el centro a la derecha */
+}
+
+.input-div::after{
+    left: 50%; /* Inicia desde el centro a la izquierda */
+}
+
+/* Ampliar línea de enfoque cuando el campo está enfocado */
+.input-div.focus:before, .input-div.focus:after{
+    width: 50%; /* Ampliar al 50% */
+}
+
+/* Cambiar el color del icono cuando el campo está enfocado */
+.input-div.focus > .i >i{
+    color: blueviolet; /* Color de los iconos */
+}
+
+/* Estilo para los campos de entrada */
+.input-div >div >input{
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alinear a la izquierda */
+    top: 0; /* Alinear arriba */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    border: none; /* Sin borde */
+    outline: none; /* Sin borde de enfoque */
+    background: none; /* Sin fondo */
+    padding: 0.5rem 0.7rem; /* Espaciado interior */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+}
+
+/* Estilo para el campo de contraseña */
+.input-div.pass{
+    margin-bottom: 4px; /* Margen inferior */
+}
+
+/* Estilo para los enlaces */
+a{
+    display: block; /* Se muestra como bloque */
+    text-align: right; /* Alinear texto a la derecha */
+    text-decoration: none; /* Sin subrayado */
+    color: #999; /* Color del texto */
+    font-size: 0.9rem; /* Tamaño de fuente */
+}
+
+/* Efecto hover para los enlaces */
+a:hover{
+    color: rgb(16, 231, 203); /* Color al pasar el cursor */
+}
+
+/* Estilo para el botón de envío */
+.btn{
+    display: block; /* Se muestra como bloque */
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura */
+    border-radius: 25px; /* Bordes redondeados */
+    outline: none; /* Sin borde de enfoque */
+    border: none; /* Sin borde */
+    background-image: linear-gradient(to right, #680197, #00ffbf, #c046f8); /* Degradado */
+    background-size: 200%; /* Tamaño del fondo */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    margin: 1rem 0; /* Margen vertical */
+    cursor: pointer; /* Cambiar cursor a mano */
+    transition: .5s; /* Duración de la transición */
+}
+
+/* Efecto hover para el botón */
+.btn:hover{
+    background-position: right; /* Mover el degradado hacia la derecha */
+}
+
+/* Responsive para tablets y celulares */
+/* Estilos para tablets */
+@media screen and (max-width: 1050px){
+    .contenedor{
+        grid-gap: 5rem; /* Reducir espacio entre columnas */
+    }
+}
+
+/* Estilos para tablets más pequeñas */
+@media screen and (max-width: 1000px){
+    form{
+        width: 290px; /* Reducir ancho del formulario */
+    }
+
+    .contenido-login h2{
+        font-size: 2.4rem; /* Reducir tamaño de fuente del título */
+        margin: 8px 0; /* Reducir margen vertical */
+    }
+
+    .img img{
+        width: 400px; /* Reducir ancho de la imagen */
+    }
+}
+
+/* Estilos para celulares */
+@media screen and (max-width: 900px){
+    .contenedor{
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .img{
+        display: none; /* Ocultar sección de imagen */
+    }
+
+    .wave{
+        display: none; /* Ocultar imagen de fondo de onda */
+    }
+
+    .contenido-login{
+        justify-content: center; /* Centrar contenido */
+    }
+}

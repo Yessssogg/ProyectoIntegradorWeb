@@ -3,8 +3,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="components/header.jsp"%>
 <%@include file="components/bodyprimeraparte.jsp"%>
-<h1>Hoola esto es una Prueba</h1>
-<p>Esto es una prueba</p>
+<h1>Registrar Doctor</h1>
+<p>Regsitrar a un nuevo especialista</p>
 <form class="user" action="SvDoctor" method="post">
     <div class="form-group row">
         <div class="col-sm-6 mb-3 ">
