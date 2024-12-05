@@ -1,35 +1,34 @@
-<%@page import="logica.Usuario"%>
+<%@page import="modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="components/header.jsp"%>
 <%@include file="components/bodyprimeraparte.jsp"%>
 <h1>Edicion de Usuarios</h1>
 <p>Este es el apartado para modificar a un usuario del sistema </p>
 
-<% Usuario usu = (Usuario)request.getSession().getAttribute("usuEditar");%>
+
+<!-- Usando JSTL para acceder al usuario almacenado en la sesión -->
+<c:set var="usu" value="${sessionScope.usuEditar}" />
 
 <form class="user" action="SvEditUsuarios" method="post">
     <div class="form-group row">
-        <div class="col-sm-6 mb-3 ">
+        <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user" id="nombreusu" name="nombreusu"
-                   placeholder="Nombre Usuario" value="<%=usu.getNombreUsuario()%>">
+                   placeholder="Nombre Usuario" value="${usu.nombreUsuario}">
         </div>
-        <div class="col-sm-6 mb-3 ">
+        <div class="col-sm-6 mb-3">
             <input type="password" class="form-control form-control-user" id="contrasenia" name="contrasenia"
-                   placeholder="Contraseña" value="<%=usu.getContrasenia()%>">
+                   placeholder="Contraseña" value="${usu.contrasenia}">
         </div>
-        <div class="col-sm-6 mb-3 ">
+        <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user" id="rol" name="rol"
-                   placeholder="Rol" value="<%=usu.getRol()%>">
-        </div>     
-           
-        <!-- Aca va ir todo lo que respecta a horarios y usuarios  -->
-
+                   placeholder="Rol" value="${usu.rol}">
+        </div>
     </div>
 
-
     <button class="btn btn-primary btn-user btn-block" type="submit">
-        Guardar Modificacion 
+        Guardar Modificación
     </button>
-
 </form>
+
 <%@include file="components/bodyfinal.jsp"%>

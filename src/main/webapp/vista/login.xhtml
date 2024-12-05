@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultorio Clinico</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/style.css" />
+</head>
+<body>
+    <img class="wave" src="#{facesContext.externalContext.requestContextPath}/img/wave.png" alt="Wave background" />
+    <div class="contenedor">
+        <div class="img">
+            <img src="#{facesContext.externalContext.requestContextPath}/img/bg.svg" alt="Background image" />
+        </div>
+        <div class="contenido-login">
+            <h:form>
+                <img src="#{facesContext.externalContext.requestContextPath}/img/logo.png" alt="Logo" />
+                <h2>Clinica San Juan</h2>
+
+                <!-- Input Usuario -->
+                <div class="input-div dni">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>USUARIO</h5>
+                        <h:inputText id="usuario" value="#{loginBean.usuario}" styleClass="input" />
+                    </div>
+                </div>
+
+                <!-- Input Contraseña -->
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Contraseña</h5>
+                        <h:inputSecret id="contrasenia" value="#{loginBean.contrasenia}" styleClass="input" />
+                    </div>
+                </div>
+
+                <!-- Enlace para olvidar contraseña -->
+                <a href="#">Olvido su contraseña?</a>
+                <!-- Botón de inicio de sesión -->
+                <h:commandButton value="Iniciar Sesión" action="#{loginBean.iniciarSesion}" styleClass="btn" />
+            </h:form>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="#{facesContext.externalContext.requestContextPath}/js/login.js"></script>
+</body>
+</html>

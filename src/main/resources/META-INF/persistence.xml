@@ -2,16 +2,16 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="ConsultorioClinico_PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>logica.Detalles</class>
-    <class>logica.Doctor</class>
-    <class>logica.Historia</class>
-    <class>logica.Horario</class>
-    <class>logica.Paciente</class>
-    <class>logica.Persona</class>
-    <class>logica.Responsable</class>
-    <class>logica.Secretario</class>
-    <class>logica.Turno</class>
-    <class>logica.Usuario</class>
+    <class>modelo.Responsable</class>
+    <class>modelo.Doctor</class>
+    <class>modelo.Turno</class>
+    <class>modelo.Historia</class>
+    <class>modelo.Persona</class>
+    <class>modelo.Usuario</class>
+    <class>modelo.Detalles</class>
+    <class>modelo.Horario</class>
+    <class>modelo.Secretario</class>
+    <class>modelo.Paciente</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/bdclinica?serverTimezone"/>

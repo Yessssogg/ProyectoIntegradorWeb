@@ -1,6 +1,7 @@
 
-<%@page import="logica.Usuario"%>
+<%@page import="modelo.Usuario"%>
 <%@page import="java.util.List"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="components/header.jsp"%>
 <%@include file="components/bodyprimeraparte.jsp"%>
@@ -36,44 +37,41 @@
                                         </tr>
                                     </tfoot>
                                     
-                                    <%
-                                        List<Usuario> listaUsuarios = (List)request.getSession().getAttribute("listaUsuarios");
-                                    %>
-                                    
-                                    <tbody>
-                                        <%for(Usuario usu :listaUsuarios) {%>                                                                                                                                  
-                                        <tr>
-                                            <td id="id_usu<%=usu.getId_usuario()%>"><%=usu.getId_usuario()%> </td>
-                                            <td><%=usu.getNombreUsuario()%></td>
-                                            <td><%=usu.getRol()%></td> 
-                                            
-                                            
-                                            <td style="display: flex; width:230px;">
-                                                <form name="eliminar" action="SvElimUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                                    <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right:5px;">
-                                                        <i class="fas fa-trash-alt"></i>Eliminar
-                                                    </button>
-                                                    <input type="hidden" name="id" value="<%=usu.getId_usuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                                </form>
-                                                <form name="editar" action="SvEditUsuarios" method="GET">
-                                                    <button type="submit" class="btn btn-primary btn-user btn-block"; style="margin-left: 5px;">
-                                                        <i class="fas fa-pencil-alt"></i>Editar  
-                                                    </button>
-                                                    <input type="hidden" name="id" value="<%=usu.getId_usuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                                </form>
-                                            </td>
-                                        </tr> 
-                                        <%}%>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                                   
+                    <!-- Iteración sobre la lista de usuarios con JSTL -->
+                    <tbody>
+                        <c:forEach var="usu" items="${sessionScope.listaUsuarios}">
+                            <tr>
+                                <td id="id_usu${usu.id_usuario}">${usu.id_usuario}</td>
+                                <td>${usu.nombreUsuario}</td>
+                                <td>${usu.rol}</td>
+                                
+                                <td style="display: flex; width:230px;">
+                                    <!-- Formulario para eliminar usuario -->
+                                    <form name="eliminar" action="SvElimUsuarios" method="POST">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right:5px;">
+                                            <i class="fas fa-trash-alt"></i>Eliminar
+                                        </button>
+                                        <input type="hidden" name="id" value="${usu.id_usuario}">
+                                    </form>
 
+                                    <!-- Formulario para editar usuario -->
+                                    <form name="editar" action="SvEditUsuarios" method="GET">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
+                                            <i class="fas fa-pencil-alt"></i>Editar  
+                                        </button>
+                                        <input type="hidden" name="id" value="${usu.id_usuario}">
+                                    </form>
+                                </td>
+                            </tr> 
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
                 </div>
                 <!-- /.container-fluid -->
-
-         
-
+     
   
 <%@include file="components/bodyfinal.jsp"%>

@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import logica.Controladora;
-import logica.Doctor;
+import modelo.Controladora;
+import modelo.Doctor;
 @WebServlet(name = "SvDoctor", urlPatterns = {"/SvDoctor"})
 public class SvDoctor extends HttpServlet {
 

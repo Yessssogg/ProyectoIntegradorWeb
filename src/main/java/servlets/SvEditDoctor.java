@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import logica.Controladora;
-import logica.Doctor;
-import logica.Horario;
-import logica.Usuario;
+import modelo.Controladora;
+import modelo.Doctor;
+import modelo.Horario;
+import modelo.Usuario;
 
 @WebServlet(name = "SvEditDoctor", urlPatterns = {"/SvEditDoctor"})
 public class SvEditDoctor extends HttpServlet {

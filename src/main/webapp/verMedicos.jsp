@@ -1,8 +1,9 @@
 
-<%@page import="logica.Doctor"%>
-<%@page import="logica.Usuario"%>
+<%@page import="modelo.Doctor"%>
+<%@page import="modelo.Usuario"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="components/header.jsp"%>
 <%@include file="components/bodyprimeraparte.jsp"%>
 <!-- Begin Page Content -->
@@ -37,39 +38,39 @@
                         </tr>
                     </tfoot>
 
-                    <%
-                        List<Doctor> listaDoctores = (List) request.getSession().getAttribute("listaDoctores");
-                    %>
-
+                    <!-- Iteración sobre la lista de doctores -->
                     <tbody>
-                        <% for (Doctor doctor : listaDoctores) {%>                                                                                                                                 
-                        <tr>
-                            <td id="id_doc<%= doctor.getId()%>"><%= doctor.getId()%></td>
-                            <td><%= doctor.getNombre()%> <%= doctor.getApellido()%></td>
-                            <td><%= doctor.getEspecialidad()%></td>
+                        <c:forEach var="doctor" items="${sessionScope.listaDoctores}">
+                            <tr>
+                                <td id="id_doc${doctor.id}">${doctor.id}</td>
+                                <td>${doctor.nombre} ${doctor.apellido}</td>
+                                <td>${doctor.especialidad}</td>
 
+                                <td style="display: flex; width:230px;">
+                                    <!-- Formulario para eliminar doctor -->
+                                    <form name="eliminar" action="SvEliminarDoctor" method="POST">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right:5px;">
+                                            <i class="fas fa-trash-alt"></i>Eliminar
+                                        </button>
+                                        <input type="hidden" name="id" value="${doctor.id}">
+                                    </form>
 
-                            <td style="display: flex; width:230px;">
-                                <form name="eliminar" action="SvEliminarDoctor" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                    <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right:5px;">
-                                        <i class="fas fa-trash-alt"></i>Eliminar
-                                    </button>
-                                    <input type="hidden" name="id" value="<%= doctor.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                </form>
-                                <form name="editar" action="SvEditDoctor" method="GET">
-                                    <button type="submit" class="btn btn-primary btn-user btn-block"; style="margin-left: 5px;">
-                                        <i class="fas fa-pencil-alt"></i>Editar  
-                                    </button>
-                                    <input type="hidden" name="id" value="<%= doctor.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                </form>
-                            </td>
-                        </tr> 
-                        <%}%>
+                                    <!-- Formulario para editar doctor -->
+                                    <form name="editar" action="SvEditDoctor" method="GET">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block"; style="margin-left: 5px;">
+                                            <i class="fas fa-pencil-alt"></i>Editar  
+                                        </button>
+                                        <input type="hidden" name="id" value="${doctor.id}">
+                                    </form>
+                                </td>
+                            </tr> 
+                        </c:forEach>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
 
 </div>
 <!-- /.container-fluid -->

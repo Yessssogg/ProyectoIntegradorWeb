@@ -1,5 +1,5 @@
-<%@page import="logica.Doctor"%>
-<%@page import="logica.Horario"%>
+<%@page import="modelo.Doctor"%>
+<%@page import="modelo.Horario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="components/header.jsp"%>
 <%@include file="components/bodyprimeraparte.jsp"%>

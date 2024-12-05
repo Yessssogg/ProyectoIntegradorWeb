@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import logica.Controladora;
-import logica.Usuario;
+import modelo.Controladora;
+import modelo.Usuario;
 
 
 @WebServlet(name = "SvUsuarios", urlPatterns = {"/SvUsuarios"})
@@ -48,8 +48,7 @@ public class SvUsuarios extends HttpServlet {
         response.sendRedirect("index.jsp");       
         
     }
-
-   
+ 
     @Override
     public String getServletInfo() {
         return "Short description";
